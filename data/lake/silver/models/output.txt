@@ -1,0 +1,154 @@
+
+============================================================
+ARQUITECTURA: [16, 1]
+============================================================
+
+Best threshold: 0.81
+Best F1-score: 0.1333
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.84      0.91      1673
+           1       0.07      0.84      0.13        25
+
+    accuracy                           0.84      1698
+   macro avg       0.53      0.84      0.52      1698
+weighted avg       0.98      0.84      0.90      1698
+
+
+Confusion matrix:
+[[1404  269]
+ [   4   21]]
+
+============================================================
+ARQUITECTURA: [32, 16, 1]
+============================================================
+
+Best threshold: 0.94
+Best F1-score: 0.1587
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.95      0.97      1673
+           1       0.10      0.40      0.16        25
+
+    accuracy                           0.94      1698
+   macro avg       0.54      0.67      0.56      1698
+weighted avg       0.98      0.94      0.96      1698
+
+
+Confusion matrix:
+[[1582   91]
+ [  15   10]]
+
+============================================================
+ARQUITECTURA: [64, 32, 16, 1]
+============================================================
+
+Best threshold: 0.89
+Best F1-score: 0.1448
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.89      0.94      1673
+           1       0.08      0.64      0.14        25
+
+    accuracy                           0.89      1698
+   macro avg       0.54      0.77      0.54      1698
+weighted avg       0.98      0.89      0.93      1698
+
+
+Confusion matrix:
+[[1493  180]
+ [   9   16]]
+
+============================================================
+ARQUITECTURA: [128, 64, 32, 1]
+============================================================
+
+Best threshold: 0.94
+Best F1-score: 0.1429
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.97      0.98      1673
+           1       0.10      0.24      0.14        25
+
+    accuracy                           0.96      1698
+   macro avg       0.55      0.60      0.56      1698
+weighted avg       0.98      0.96      0.97      1698
+
+
+Confusion matrix:
+[[1620   53]
+ [  19    6]]
+
+============================================================
+ARQUITECTURA: [64, 32, 16, 8, 1]
+============================================================
+
+Best threshold: 0.62
+Best F1-score: 0.1163
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.82      0.90      1673
+           1       0.06      0.80      0.12        25
+
+    accuracy                           0.82      1698
+   macro avg       0.53      0.81      0.51      1698
+weighted avg       0.98      0.82      0.89      1698
+
+
+Confusion matrix:
+[[1374  299]
+ [   5   20]]
+
+============================================================
+ARQUITECTURA: [32, 64, 32, 16, 1]
+============================================================
+
+Best threshold: 0.95
+Best F1-score: 0.1732
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.95      0.97      1673
+           1       0.11      0.44      0.17        25
+
+    accuracy                           0.94      1698
+   macro avg       0.55      0.69      0.57      1698
+weighted avg       0.98      0.94      0.96      1698
+
+
+Confusion matrix:
+[[1582   91]
+ [  14   11]]
+
+============================================================
+ARQUITECTURA: [128, 32, 1]
+============================================================
+
+Best threshold: 0.94
+Best F1-score: 0.2105
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      1673
+           1       0.31      0.16      0.21        25
+
+    accuracy                           0.98      1698
+   macro avg       0.65      0.58      0.60      1698
+weighted avg       0.98      0.98      0.98      1698
+
+
+Confusion matrix:
+[[1664    9]
+ [  21    4]]

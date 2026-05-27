@@ -1,0 +1,28 @@
+{
+    "architecture": [
+        32,
+        16,
+        1
+    ],
+    "threshold": 0.9400000000000001,
+    "f1_score": 0.15873015873015872,
+    "tensorflow_version": "2.20.0-dev0+selfbuilt",
+    "keras_version": "3.12.0.dev2025100703",
+    "numpy_version": "2.3.5",
+    "features": [
+        "calefaccion_on",
+        "temperature_sensor",
+        "temperatura",
+        "temp_diff",
+        "humidity_sensor",
+        "humedad",
+        "humidity_diff",
+        "viento",
+        "direccion_viento",
+        "elevation",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+    ]
+}

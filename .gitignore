@@ -1,0 +1,34 @@
+# Variables de entorno (credenciales locales)
+.env
+/src/.env
+
+# Datos de Postgres / volumenes Docker
+/postgres_data/
+/docker/postgres_data/
+
+# Buffers y outputs locales del ETL
+/data/lake/logs/etl_log_buffer.sqlite
+/data/lake/sensors/ltss_sensores.csv
+/data/lake/sensors/ltss_sensores.parquet
+
+# Scripts SQL de carga inicial (rutas locales)
+/data/Sensores/Creacion.sql
+/data/Sensores/descarga.sql
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Editores / SO
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

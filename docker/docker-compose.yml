@@ -1,0 +1,65 @@
+name: sensores-proyecto
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: mi_api_inferencia
+    restart: unless-stopped
+    environment:
+      PORT: 8000
+      MODEL_DIR: /app/src/model
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  db:
+    image: postgres:latest # O postgres:18
+    container_name: mi_postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD no definida en .env}
+      POSTGRES_DB: ${DB_NAME:-postgres}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: mi_grafana
+    restart: unless-stopped
+    depends_on:
+      - db
+      - logs_db
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+  logs_db:
+    image: mysql:8.4
+    container_name: mi_mysql_logs
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_LOG_PASSWORD:?MYSQL_LOG_PASSWORD no definida en .env}
+      MYSQL_DATABASE: ${MYSQL_LOG_DB:-etl_logs}
+      MYSQL_USER: ${MYSQL_LOG_USER:-etl_logger}
+      MYSQL_PASSWORD: ${MYSQL_LOG_PASSWORD:?MYSQL_LOG_PASSWORD no definida en .env}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_logs_data:/var/lib/mysql
+
+volumes:
+  grafana_data:
+  mysql_logs_data:

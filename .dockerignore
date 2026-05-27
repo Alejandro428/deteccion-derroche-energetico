@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.gitignore
+notebooks/
+docker/postgres_data/
+data/lake/logs/
+data/lake/sensors/
+

@@ -1,0 +1,65 @@
+{
+  "modo": "automatico",
+  "programacion": [
+    {
+      "horario": {
+        "inicio": "06:59",
+        "fin": "11:00"
+      },
+      "dias": ["lunes", "martes", "miercoles", "jueves", "viernes"],
+      "reglas": {
+        "encender_si_menor_que": 21.9,
+        "apagar_si_mayor_que": 22.0
+      },
+      "activo": true
+    },
+    {
+      "horario": {
+        "inicio": "11:02",
+        "fin": "16:00"
+      },
+      "dias": ["lunes", "martes", "miercoles", "jueves", "viernes"],
+      "reglas": {
+        "encender_si_menor_que": 21.9,
+        "apagar_si_mayor_que": 22.0
+      },
+      "activo": true
+    },
+    {
+      "horario": {
+        "inicio": "16:02",
+        "fin": "18:00"
+      },
+      "dias": ["lunes", "martes", "miercoles", "jueves", "viernes"],
+      "reglas": {
+        "encender_si_menor_que": 21.5,
+        "apagar_si_mayor_que": 21.6
+      },
+      "activo": true
+    },
+    {
+      "horario": {
+        "inicio": "18:02",
+        "fin": "20:40"
+      },
+      "dias": ["lunes", "martes", "miercoles", "jueves", "viernes"],
+      "reglas": {
+        "encender_si_menor_que": 21.9,
+        "apagar_si_mayor_que": 22.0
+      },
+      "activo": true
+    },
+    {
+      "horario": {
+        "inicio": "04:00",
+        "fin": "05:00"
+      },
+      "dias": ["todos"],
+      "reglas": {
+        "encender_si_menor_que": 4.0,
+        "apagar_si_mayor_que": 5.0
+      },
+      "activo": false
+    }
+  ]
+}
