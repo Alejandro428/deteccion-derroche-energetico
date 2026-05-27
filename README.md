@@ -90,16 +90,14 @@ Proyecto en equipo en el que **participe en varias areas del pipeline**:
 - Python 3.10+ (o el entorno conda `environment.tensorflow.yml`).
 - Docker y Docker Compose.
 
-### 2. Clonar y configurar entorno
+### 2. Clonar el repositorio
 
 ```bash
 git clone https://github.com/Alejandro428/deteccion-derroche-energetico.git
 cd deteccion-derroche-energetico
-
-# Crear el archivo de variables de entorno
-cp .env.example .env
-# Editar .env y poner tus propias passwords
 ```
+
+> **Nota sobre credenciales**: el proyecto trae unas credenciales por defecto cableadas en `docker-compose.yml` y en los notebooks (`DB_PASSWORD=dfer4X4d5`, `MYSQL_LOG_PASSWORD=dfer4X4d5`, `GRAFANA=admin/admin`). Esto es intencionado: son **passwords solo para el entorno Docker local**, no protegen ningun sistema real y permiten que el proyecto arranque sin configuracion. Si quieres cambiarlas, copia `.env.example` a `.env` y edita lo que quieras — los notebooks y `docker-compose.yml` priorizan las variables de entorno frente a los defaults.
 
 ### 3. Levantar la infraestructura
 

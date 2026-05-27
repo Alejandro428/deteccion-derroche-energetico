@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USER:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD no definida en .env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-dfer4X4d5}
       POSTGRES_DB: ${DB_NAME:-postgres}
     ports:
       - "5432:5432"
@@ -51,10 +51,10 @@ services:
     container_name: mi_mysql_logs
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_LOG_PASSWORD:?MYSQL_LOG_PASSWORD no definida en .env}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_LOG_PASSWORD:-dfer4X4d5}
       MYSQL_DATABASE: ${MYSQL_LOG_DB:-etl_logs}
       MYSQL_USER: ${MYSQL_LOG_USER:-etl_logger}
-      MYSQL_PASSWORD: ${MYSQL_LOG_PASSWORD:?MYSQL_LOG_PASSWORD no definida en .env}
+      MYSQL_PASSWORD: ${MYSQL_LOG_PASSWORD:-dfer4X4d5}
     ports:
       - "3306:3306"
     volumes:
